@@ -1,0 +1,4 @@
+
+interface name{
+    a :string
+}
