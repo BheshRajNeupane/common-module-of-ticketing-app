@@ -47,4 +47,5 @@ export abstract class Listener<T extends Event> {
       ? JSON.parse(data)
       : JSON.parse(data.toString('utf8'));
   }
+  
 }
