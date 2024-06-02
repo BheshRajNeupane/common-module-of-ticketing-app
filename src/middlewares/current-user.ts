@@ -19,7 +19,7 @@ export const currentUser = (
   res: Response,
   next: NextFunction
 ) => {
-  if (!req.session?.jwt) {
+  if (!req.session) {//!req.session?.jwt
     console.log("coomon req session test");
 
     return next();
