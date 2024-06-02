@@ -20,6 +20,8 @@ export const currentUser = (
   next: NextFunction
 ) => {
   if (!req.session?.jwt) {
+    console.log("coomon req session test");
+
     return next();
   }
 
@@ -29,7 +31,10 @@ export const currentUser = (
       "asdf"
       //  process.env.JWT_KEY!
     ) as UserPayload;
+    console.log("pay", payload);
+
     req.currentUser = payload;
+    console.log("currnet", req.currentUser);
   } catch (err) {}
 
   next();
